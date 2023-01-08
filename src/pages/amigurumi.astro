@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+import Card from "../components/Card.astro";
+
+const fetchData = async (products: string) => {
+  const ref = collection(db, products);
+  const querySnapshot = await getDocs(ref);
+  const data = querySnapshot.docs.map((doc) => doc.data());
+  return data;
+};
+const data = await fetchData('amigurumi')
+---
+<Layout title="Bienvenido a doll">
+  <h1>Amigugumi</h1>
+  <div class="container">
+    {
+      data.map((item) => {
+        return (
+          <Card product={item} />
+        )
+      })
+    }
+  </div>
+</Layout>
+
+<style>
+  .container {
+    width: 75vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
+    gap: 2rem;
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import Button from './Buttton.astro'
+
+---
+<script>
+const buttonLogin = document.querySelector('#login');
+buttonLogin?.addEventListener('click', () => {
+  console.log('click');
+})
+</script>
+<header>
+  <div class="naviagtor">
+    <div>
+      <a href="/"><img class="logo" src="/image/logo.png" alt=""></a>
+    </div>
+    <div class="conatiner">
+      <ul class="navbar">
+        <li><a href="amigurumi">Amigurumi</a></li>
+        <li><a href="ganchillo">Ganchillo</a></li>
+        <li><a href="hama">Hama</a></li>
+      </ul>
+      <Button id="login" title="Login" />
+    </div>
+    
+  </div>
+</header>
+
+<style>
+  .logo {
+    width: 48px;
+    object-fit: cover;
+  }
+  .naviagtor {
+    display: flex;
+    margin: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .navbar > li {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+  .navbar > li > a {
+    text-decoration: none;
+    color: #fff;
+  } 
+  button {
+    background-color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+  }
+</style>

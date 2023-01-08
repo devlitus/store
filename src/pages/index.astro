@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Bienvenido a doll">
+	
+	<main>
+		<h1 >Store Doll</h1>
+			<div class="container">
+				<div class="content">
+					<a href="amigurumi"><img src="./image/amigurumi.jpg" alt=""></a>
+					<a href="ganchillo"><img src="./image/needle.jpg" alt=""></a>
+					<a href="hama"><img src="./image/hama.jpg" alt=""></a>
+				</div>
+			</div>
+	</main>
+</Layout>
+
+<style>
+	
+	h1{
+		text-align: center;
+		font-size: 3rem;
+	}
+	.container {
+		width: 75%;
+		margin: 0 auto;
+	}
+	.content {
+		width: 75%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: 3rem;
+	}
+
+	img{
+		width: 100%;
+		height: 80%;
+		object-fit: cover;
+		border: 2px solid #fff;
+		border-radius: 10px;
+	}
+</style>
