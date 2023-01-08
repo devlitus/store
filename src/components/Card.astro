@@ -3,10 +3,6 @@ import type { IProduct } from '../interface/product';
 
 const product = Astro.props.product;
 ---
-<div class="grid-item grid-size border-solid border-3 border-white">
-	<img class="" src={product.urlImage[0]} alt={product.name} />
+<div class=" border-solid border-3 border-white">
+	<img class="object-cover w-full" src={product.urlImage[0]} alt={product.name} />
 </div>
-
-<style>
-	.grid-item, .grid-size { width: 25%; }
-</style>

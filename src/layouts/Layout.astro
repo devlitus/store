@@ -17,10 +17,11 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	
 	<body class="w-3/4 m-auto">
 		<Header />
 		<slot />
+
 	</body>
 </html>
 <style is:global>
