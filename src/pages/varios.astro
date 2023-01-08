@@ -10,11 +10,11 @@ const fetchData = async (products: string) => {
   const data = querySnapshot.docs.map((doc) => doc.data());
   return data;
 };
-const data = await fetchData('hama')
+const data = await fetchData('ganchillo')
 ---
 <Layout title="Bienvenido a doll">
-  <h1>Hama</h1>
-  <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5">
+
+  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100 }' >
     {
       data.map((item) => {
         return (

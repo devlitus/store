@@ -7,64 +7,24 @@ const buttonLogin = document.querySelector('#login');
 buttonLogin?.addEventListener('click', () => {
   console.log('click');
 })
+
 </script>
 <header>
-  <div class="naviagtor">
-    <div>
-      <a href="/"><img class="logo" src="/image/logo.png" alt=""></a>
-    </div>
-    <div class="conatiner">
-      <ul class="navbar">
-        <li><a href="amigurumi">Amigurumi</a></li>
-        <li><a href="ganchillo">Ganchillo</a></li>
-        <li><a href="hama">Hama</a></li>
+  <div class="flex justify-between items-center">
+    <div><a href="/"><h1 class="text-3xl">Store Doll</h1></a></div>
+    <div class="flex gap-4 items-center my-6">
+      <ul class="flex gap-7 items-center">
+        <li><a class="block transition-all hover:scale-110 font-semibold hover:underline" href="amigurumi">Amigurumi</a></li>
+        <li><a class="block transition-all hover:scale-110 font-semibold hover:underline" href="varios">Varios</a></li>
+        <li><a class="block transition-all hover:scale-110 font-semibold hover:underline" href="hama">Hama</a></li>
       </ul>
+      <div class="" >
+        <svg fill='#d5cea3' xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
+      </div>
       <Button id="login" title="Login" />
     </div>
     
   </div>
 </header>
 
-<style>
-  .logo {
-    width: 48px;
-    object-fit: cover;
-  }
-  .naviagtor {
-    display: flex;
-    margin: 1rem 2rem;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .conatiner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .navbar > li {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-  }
-  .navbar > li > a {
-    text-decoration: none;
-    color: #fff;
-  } 
-  button {
-    background-color: #fff;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #000;
-  }
-</style>
+

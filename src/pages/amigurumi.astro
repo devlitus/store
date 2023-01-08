@@ -13,8 +13,7 @@ const fetchData = async (products: string) => {
 const data = await fetchData('amigurumi')
 ---
 <Layout title="Bienvenido a doll">
-  <h1>Amigugumi</h1>
-  <div class="container">
+  <div class="grid " data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }' >
     {
       data.map((item) => {
         return (
@@ -24,13 +23,3 @@ const data = await fetchData('amigurumi')
     }
   </div>
 </Layout>
-
-<style>
-  .container {
-    width: 75vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
-    gap: 2rem;
-  }
-</style>
