@@ -13,8 +13,8 @@ const fetchData = async (products: string) => {
 const data = await fetchData('ganchillo')
 ---
 <Layout title="Bienvenido a doll">
-
-  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100 }' >
+  <h2 class="text-3xl text-center my-7">Varios</h2>
+  <div class="lg:columns-4 sm:columns-3 space-y-5" >
     {
       data.map((item) => {
         return (

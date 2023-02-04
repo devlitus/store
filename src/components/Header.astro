@@ -1,27 +1,17 @@
 ---
-import Button from './Buttton.astro'
-
+import { ButtonLogin } from './Button';
 ---
-<script>
-const buttonLogin = document.querySelector('#login');
-buttonLogin?.addEventListener('click', () => {
-  console.log('click');
-})
 
-</script>
 <header>
-  <div class="flex justify-between items-center">
-    <div><a href="/"><h1 class="text-3xl">Store Doll</h1></a></div>
+  <div class="flex justify-between items-center flex-wrap ">
+    <div class=""><a href="/"><h1 class="text-4xl">Store Doll</h1></a></div>
     <div class="flex gap-4 items-center my-6">
       <ul class="flex gap-7 items-center">
-        <li><a class="block transition-all hover:scale-110 font-semibold hover:underline" href="amigurumi">Amigurumi</a></li>
-        <li><a class="block transition-all hover:scale-110 font-semibold hover:underline" href="varios">Varios</a></li>
-        <li><a class="block transition-all hover:scale-110 font-semibold hover:underline" href="hama">Hama</a></li>
+        <li><a class="block transform-all ease-linear duration-200 hover:scale-110 font-semibold hover:underline" href="amigurumi">Amigurumi</a></li>
+        <li><a class="block transform-all ease-linear duration-200 hover:scale-110 font-semibold hover:underline" href="varios">Varios</a></li>
+        <li><a class="block transform-all ease-linear duration-200 hover:scale-110 font-semibold hover:underline" href="hama">Hama</a></li>
       </ul>
-      <div class="" >
-        <svg fill='#d5cea3' xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
-      </div>
-      <Button id="login" title="Login" />
+      <ButtonLogin client:visible>Login</ButtonLogin>
     </div>
     
   </div>
