@@ -4,5 +4,5 @@ import type { IProduct } from '../interface/product';
 const product = Astro.props.product;
 ---
 <div class=" border-solid border-3 border-white">
-	<img class="w-full " src={product.urlImage[0]} alt={product.name} />
+	<img class="w-full object-cover" src={product.urlImage[0]} alt={product.name} />
 </div>
