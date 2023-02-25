@@ -1,8 +1,8 @@
 ---
-import Layout from "@layouts/Layout.astro";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "@services/firebase";
 import Card from "@components/Card.astro";
+import { db } from "@services/firebase";
+import Layout from "@layouts/Layout.astro";
 
 const fetchData = async (products: string) => {
   const ref = collection(db, products);
@@ -10,11 +10,11 @@ const fetchData = async (products: string) => {
   const data = querySnapshot.docs.map((doc) => doc.data());
   return data;
 };
-const data = await fetchData('amigurumi')
+const data = await fetchData('felting')
 ---
 <Layout title="Bienvenido a doll">
-  <h2 class="text-3xl text-center my-7">Amigurumi</h2>
-  <div class="lg:columns-4 sm:columns-3 space-y-5">
+  <h1>Felting</h1>
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5">
     {
       data.map((item) => {
         return (
@@ -23,5 +23,4 @@ const data = await fetchData('amigurumi')
       })
     }
   </div>
-  
 </Layout>

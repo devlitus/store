@@ -1,8 +1,8 @@
 ---
 import { collection, getDocs } from "firebase/firestore";
-import Card from "../components/Card.astro";
-import { db } from "../firebase";
-import Layout from "../layouts/Layout.astro";
+import Card from "@components/Card.astro";
+import { db } from "@services/firebase";
+import Layout from "@layouts/Layout.astro";
 
 const fetchData = async (products: string) => {
   const ref = collection(db, products);
