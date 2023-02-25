@@ -17,8 +17,3 @@ html {
   color: var(--color-terciary);
   background-color: var(--color-primary);
 }
-@media (max-width: 768px) {
-  button {
-    display: none;
-  }
-}

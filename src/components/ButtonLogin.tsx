@@ -3,7 +3,7 @@ import { auth } from "@services/firebase";
 import { signInWithRedirect, GoogleAuthProvider } from "firebase/auth";
 import "@styles/button.module.css";
 
-export const ButtonLogin = ({ children }: any) => {
+export const ButtonLogin = ({ children, ...props }: any) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const onLogin = async () => {

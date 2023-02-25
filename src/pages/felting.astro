@@ -13,7 +13,7 @@ const fetchData = async (products: string) => {
 const data = await fetchData('felting')
 ---
 <Layout title="Bienvenido a doll">
-  <h1>Felting</h1>
+  <h1 class="text-center font-semibold my-7 text-5xl">Felting</h1>
   <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5">
     {
       data.map((item) => {

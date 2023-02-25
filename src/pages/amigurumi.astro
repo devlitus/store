@@ -13,7 +13,7 @@ const fetchData = async (products: string) => {
 const data = await fetchData('amigurumi')
 ---
 <Layout title="Bienvenido a doll">
-  <h2 class="text-3xl text-center my-7">Amigurumi</h2>
+  <h2 class="text-center font-semibold text-5xl my-7">Amigurumi</h2>
   <div class="lg:columns-4 sm:columns-3 space-y-5">
     {
       data.map((item) => {

@@ -1,22 +1,66 @@
 ---
 import { ButtonLogin } from '@components/ButtonLogin';
+import { Button } from '@components/Button';
+import Icon from './Icon.astro';
 ---
 
-<header>
-  <div class="flex justify-between items-center flex-wrap ">
-    <div class=""><a href="/"><h1 class="text-4xl">Store Doll</h1></a></div>
-    <div class="flex gap-4 items-center my-6">
-      <ul class="flex gap-7 items-center">
-        <li><a class="block transform-all ease-linear duration-200 hover:scale-110 font-semibold hover:underline" href="amigurumi">Amigurumi</a></li>
-        <li><a class="block transform-all ease-linear duration-200 hover:scale-110 font-semibold hover:underline" href="varios">Varios</a></li>
-        <li><a class="block transform-all ease-linear duration-200 hover:scale-110 font-semibold hover:underline" href="hama">Hama</a></li>
-        <li><a class="block transform-all ease-linear duration-200 hover:scale-110 font-semibold hover:underline" href="felting">Felting</a></li>
+
+<header class="flex justify-between my-6">
+  <a href="/"><img class="w-10" src="./image/logo.png" alt="logo"></a> 
+  
+  <nav class="header-desktop">
+    <div>
+      <ul class="flex gap-x-10">
+        <li class="transition-all ease-linear hover:scale-150 hover:font-bold"><a href="amigurumi">Amigurumi</a></li>
+        <li class="transition-all ease-linear hover:scale-150 hover:font-bold"><a href="varios">varios</a></li>
+        <li class="transition-all ease-linear hover:scale-150 hover:font-bold"><a href="hama">Hama</a></li>
+        <li class="transition-all ease-linear hover:scale-150 hover:font-bold"><a href="felting">Felting</a></li>
       </ul>
-      <ButtonLogin client:visible>Login</ButtonLogin>
     </div>
-    
-  </div>
+  </nav>
+  <nav class="header-movile">
+    <button id="button">
+      <Icon src="./image/menu.svg" />
+    </button>
+    <dialog class="bg-primary opacity-95 border-none h-full scroll-none w-full text-cente text-secondary-light" id="modal">
+      <button class="flex w-full justify-end text-3xl font-bold mr-4" id="close">X</button>
+      <div>
+        <ul class="flex flex-col gap-y-7 mt-8 items-center">
+          <li class="transition-all ease-linear hover:scale-150 hover:font-bold" ><a href="amigurumi">Amigurumi</a></li>
+          <li class="transition-all ease-linear hover:scale-150 hover:font-bold" ><a href="varios">varios</a></li>
+          <li class="transition-all ease-linear hover:scale-150 hover:font-bold" ><a href="hama">Hama</a></li>
+          <li class="transition-all ease-linear hover:scale-150 hover:font-bold" ><a href="felting">Felting</a></li>
+        </ul>
+      </div>
+    </dialog>
+  </nav>
+  
 </header>
+<style>
+  @media (max-width: 768px) {
+    .header-desktop {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .header-movile {
+      display: none;
+    }
+    
+  }
+</style>
 
 
+<script>
+  const button = document.querySelector('#button');
+  const modal = document.querySelector('#modal');
+  const close = document.querySelector('#close');
+  button?.addEventListener('click', () => {
+    modal?.showModal();
+  });
+  close?.addEventListener('click', () => {
+    modal?.close();
+  });
+
+</script>
 
